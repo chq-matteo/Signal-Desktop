@@ -29,7 +29,7 @@
       background: $color-gray-02;
     }
     ::-webkit-scrollbar-thumb {
-      border: 2px solid $color-gray-02;
+      // border: 2px solid $color-gray-02;
     }
   }
   @include dark-theme {
