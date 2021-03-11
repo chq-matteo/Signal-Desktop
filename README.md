@@ -1,6 +1,10 @@
 <!-- Copyright 2014-2020 Signal Messenger, LLC -->
 <!-- SPDX-License-Identifier: AGPL-3.0-only -->
 
+# This is not the real Signal Desktop repository!
+
+This is a fork with a couple of changes in the scss to make messages more readable to me (with ideas copied from other super popular messaging apps).
+
 # Signal Desktop
 
 Signal Desktop is an Electron application that links with Signal

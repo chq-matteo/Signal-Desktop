@@ -1,6 +1,6 @@
 {
   "name": "signal-desktop",
-  "productName": "Signal",
+  "productName": "Bootleg Singal",
   "description": "Private messaging from your desktop",
   "desktopName": "signal.desktop",
   "repository": "https://github.com/signalapp/Signal-Desktop.git",
@@ -303,9 +303,6 @@
         "node_modules/libsignal-client/build/*.node"
       ],
       "artifactName": "${name}-win-${version}.${ext}",
-      "certificateSubjectName": "Signal (Quiet Riddle Ventures, LLC)",
-      "certificateSha1": "77B2AA4421E5F377454B8B91E573746592D1543D",
-      "publisherName": "Signal (Quiet Riddle Ventures, LLC)",
       "icon": "build/icons/win/icon.ico",
       "publish": [
         {
