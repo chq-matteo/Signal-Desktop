@@ -1084,7 +1084,7 @@
     outline: none;
 
     @include light-theme {
-      color: $color-gray-90;
+      color: $color-blue;
     }
     @include keyboard-mode {
       &:focus {
