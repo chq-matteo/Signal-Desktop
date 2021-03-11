@@ -1476,7 +1476,8 @@
 
   min-width: 28px;
   height: 22px;
-  border: 1px solid;
+  // border: 1px solid;
+  box-shadow: 1px 1px 8px rgba($color-gray-20, 0.2);
   border-radius: 33px;
   display: flex;
   justify-content: center;
@@ -1530,7 +1531,7 @@
 
   @include light-theme() {
     border-color: $color-white;
-    background: $color-gray-05;
+    background: $color-gray-02;
   }
 
   @include dark-theme() {
@@ -1540,7 +1541,7 @@
 
   &--is-me {
     @include light-theme() {
-      background: $color-gray-25;
+      background: $color-gray-15;
     }
 
     @include dark-theme() {
@@ -1704,7 +1705,11 @@ $timer-icons: '55', '50', '45', '40', '35', '30', '25', '20', '15', '10', '05',
 .module-quote--outgoing {
   border-left-color: $color-conversation-grey;
   @include light-theme {
-    background-color: $color-conversation-grey-tint;
+    border-left-color: $color-conversation-grey;
+    background-color: rgba($color-conversation-grey, 0.2);
+    .module-quote__primary__author {
+      color: darken($color-conversation-grey, 20%);
+    }
   }
   @include dark-theme {
     background-color: $color-conversation-grey-shade;
@@ -1746,12 +1751,22 @@ $timer-icons: '55', '50', '45', '40', '35', '30', '25', '20', '15', '10', '05',
 @each $color, $value in $conversation-colors {
   .module-quote--outgoing-#{$color} {
     border-left-color: $value;
+    background-color: rgba( $value, 0.1);
+    
+    .module-quote__primary__author {
+      color: darken($value, 20%);
+    }
   }
 }
 @each $color, $value in $conversation-colors-tint {
   .module-quote--outgoing-#{$color} {
     @include light-theme {
-      background-color: $value;
+      border-left-color: $value;
+      background-color: rgba( $value, 0.1);
+
+      .module-quote__primary__author {
+        color: darken($value, 20%);
+      }
     }
   }
 }
@@ -1765,8 +1780,11 @@ $timer-icons: '55', '50', '45', '40', '35', '30', '25', '20', '15', '10', '05',
 
 .module-quote--incoming {
   @include light-theme {
-    border-left-color: $color-white;
-    background-color: $color-conversation-grey-tint;
+    border-left-color: $color-conversation-grey-tint;
+    background-color: rgba($color-conversation-grey-tint, 0.2);
+    .module-quote__primary__author {
+      color: darken($color-conversation-grey-tint, 20%);
+    }
   }
   @include dark-theme {
     border-left-color: $color-black;
@@ -1786,7 +1804,12 @@ $timer-icons: '55', '50', '45', '40', '35', '30', '25', '20', '15', '10', '05',
 @each $color, $value in $conversation-colors-tint {
   .module-quote--incoming-#{$color} {
     @include light-theme {
-      background-color: $value;
+      border-left-color: $value;
+      background-color: rgba( $value, 0.1);
+
+      .module-quote__primary__author {
+        color: darken($value, 20%);
+      }
     }
   }
 }
@@ -1817,7 +1840,7 @@ $timer-icons: '55', '50', '45', '40', '35', '30', '25', '20', '15', '10', '05',
   text-overflow: ellipsis;
 
   @include light-theme {
-    color: $color-gray-90;
+    // color: $color-gray-90;
   }
   @include dark-theme {
     color: $color-gray-02;
@@ -1829,7 +1852,7 @@ $timer-icons: '55', '50', '45', '40', '35', '30', '25', '20', '15', '10', '05',
 
 .module-quote__primary__author--incoming {
   @include ios-dark-theme {
-    color: $color-gray-05;
+    // color: $color-gray-05;
   }
 }
 
@@ -6036,7 +6059,8 @@ button.module-image__border-overlay:focus {
 }
 
 .module-message-body__at-mention {
-  background-color: $color-black-alpha-40;
+  // background-color: $color-black-alpha-05;
+  color: $color-accent-blue;
   border-radius: 4px;
   cursor: pointer;
   display: inline-block;
@@ -6053,7 +6077,8 @@ button.module-image__border-overlay:focus {
 .module-message-body__at-mention--incoming {
   @include ios-theme {
     @include light-theme {
-      background-color: $color-gray-20;
+      // background-color: $color-gray-20;
+      color: $color-accent-blue;
     }
   }
 
@@ -6064,7 +6089,8 @@ button.module-image__border-overlay:focus {
 
 .module-message-body__at-mention--outgoing {
   @include light-theme {
-    background-color: $color-gray-20;
+    // background-color: $color-gray-20;
+    color: $color-accent-blue;
   }
 
   @include dark-theme {
@@ -6386,8 +6412,7 @@ button.module-image__border-overlay:focus {
     background: transparent;
   }
   to {
-    // This color is the same in both light and dark themes
-    background: rgba($color-black, 0.8);
+    background: $color-gray-02;
   }
 }
 
