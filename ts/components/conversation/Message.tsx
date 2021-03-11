@@ -985,8 +985,7 @@ export class Message extends React.PureComponent<Props, State> {
 
     const withContentAbove =
       conversationType === 'group' && direction === 'incoming';
-    const quoteColor =
-      direction === 'incoming' ? authorColor : quote.authorColor;
+    const quoteColor = quote.authorColor || authorColor;
     const { referencedMessageNotFound } = quote;
 
     const clickHandler = disableScroll
